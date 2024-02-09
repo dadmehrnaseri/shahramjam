@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="num"></p>  
+    <button id="btn">add</button> 
+    <script>
+        document.getElementById('num').addEventListener("click",function (){
+            document.getElementById('num').innerText = parseInt(document.getElementById('num').innerText)+1
+
+        })
+        document.getElementById('btn').addEventListener("click",function (){
+            let x=parseInt(document.getElementById('num').innerText)+1
+            document.getElementById('num').innerText = x
+            localStorage.setItem("local",x)
+        })
+
+        let y=localStorage.getItem('local')
+        if( isNaN(y)==true || y=="" || y==null){
+            y=0
+        }
+        document.getElementById('num').innerText=y
+    </script>
+</body>
+</html>

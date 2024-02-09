@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <p id="num"></p>
+    <button onclick="add()">add</button>
+    <button onclick="minus()">minus</button>
+
+    <script>
+        let x = localStorage.getItem("localx")
+        if(isNaN(x) == true){
+            x = 0
+        }
+        document.getElementById("num").innerText = x
+    </script>
+</body>
+</html>

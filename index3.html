@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <p id="num">0</p>  
+  <button onclick="f1()">add</button>
+</body>
+<script>
+    function f1(){
+       let x= parseInt(document.getElementById('num').innerText)
+       x+=1
+       document.getElementById('num').innerText=x
+    }
+</script>
+</html>
